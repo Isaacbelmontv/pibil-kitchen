@@ -26,6 +26,37 @@
   width: 130px;
 }
 
+.margin-left-10{
+  margin-left: 10px;
+}
+
+.tp-tabs{
+  display: none !important;
+  visibility: collapse !important;
+}
+
+.txt-comida{
+  font-size: 20px;
+  margin-top: 15px;
+  /* font-weight: bolder; */
+}
+
+.img-comida{
+  min-height: 184.5px !important;
+  max-height: 184.5px !important;
+}
+
+.label-form{
+  font-size: 17px;
+  color: white;
+  padding-bottom: 10px;
+
+}
+
+.text-align-left{
+  text-align: left;
+}
+
 /**----- Fonts ----**/
 
 @font-face {
