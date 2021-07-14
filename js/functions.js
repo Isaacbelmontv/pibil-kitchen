@@ -1,3 +1,28 @@
+	myID = document.getElementById("main-navigation");
+	var y = window.scrollY;
+	if (y >= 50) {
+		myID.className = "show"
+	} else {
+		myID.className = "hide"
+	}
+
+
+	$(document).scroll(function() {
+		
+		myID = document.getElementById("main-navigation");
+
+		var myScrollFunc = function () {
+			var y = window.scrollY;
+			if (y >= 50) {
+				myID.className = "show"
+			} else {
+				myID.className = "hide"
+			}
+		};
+
+		window.addEventListener("scroll", myScrollFunc);
+	});
+
 
 
  //Window Loaded Handler
