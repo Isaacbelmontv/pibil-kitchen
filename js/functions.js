@@ -253,17 +253,11 @@ jQuery(function($) {'use strict';
 	$("#btn_order_submit").click(function() {
         //get input field values
         var user_name       = $('input[name=name]').val();
-        var user_email      = $('input[name=email]').val();
 		var user_telephone      = $('input[name=phone]').val();
-		var order_deal      = $('select[name=deal]').val();
-        var user_message    = $('textarea[name=message]').val();
 
         //simple validation at client's end
         var proceed = true;
         if(user_name==""){
-            proceed = false;
-        }
-        if(user_email==""){
             proceed = false;
         }
 
@@ -271,15 +265,11 @@ jQuery(function($) {'use strict';
             proceed = false;
         }
 
-		if(user_message=="") {
-            proceed = false;
-        }
-
         //everything looks good! proceed...
         if(proceed)
         {
             //data to be sent to server
-           var post_data = {'userName':user_name, 'userEmail':user_email, 'userTelephone':user_telephone, 'order_deal':order_deal, 'userMessage':user_message};
+           var post_data = {'userName':user_name,'userTelephone':user_telephone};
             //Ajax post data to server
             $.post('onlineorder.php', post_data, function(response){
                 var output;
