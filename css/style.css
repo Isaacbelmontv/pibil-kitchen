@@ -2,6 +2,12 @@
 /* Style Editado
 */
 
+#result{
+  font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
 .hide {
   visibility: collapse;
 }

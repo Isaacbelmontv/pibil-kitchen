@@ -251,9 +251,10 @@ jQuery(function($) {'use strict';
 	// ======================================================
 
 	$("#btn_order_submit").click(function() {
-        //get input field values
+
         var user_name       = $('input[name=name]').val();
 		var user_telephone      = $('input[name=phone]').val();
+		var check      = $('input[name=check]').val();
 
         //simple validation at client's end
         var proceed = true;
@@ -262,6 +263,10 @@ jQuery(function($) {'use strict';
         }
 
 		 if(user_telephone==""){
+            proceed = false;
+        }
+
+		if(check==""){
             proceed = false;
         }
 
@@ -283,7 +288,7 @@ jQuery(function($) {'use strict';
 					//reset values in all input fields
 					$('#order_form input').val('');
 					$('#order_form textarea').val('');
-                    $('#btn_order_submit').val('Place Order');
+                    $('#btn_order_submit').val('Formulario Enviado');
 				}
 
 				$("#result").hide().html(output).slideDown();
